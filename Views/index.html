@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web Pet</title>
+
+</head>
+
+<link rel="stylesheet" href="index.css" />
+<script src="index.js" defer></script>
+
+<body>
+  <div class="name-input">
+    <label for="petName">Name your pet:</label>
+    <input type="text" id="petName" placeholder="e.g. Ellie 🐘" />
+    <button onclick="setPetName()">Save</button>
+  </div>
+
+  <h2 id="displayName"></h2>
+
+  <div class="pet">
+    <img id="petImg" src="images/elephant_eyes_open.png" alt="Cute Pet" />
+  </div>
+
+    <label for="bgSelect">Choose background:</label>
+    <select id="bgSelect" onchange="changeBackground()">
+      <option value="images/bg_outdoors.jpeg">Outdoors (Day)</option>
+      <option value="images/bg2.jpeg">Outdoors (Evening)</option>
+    </select>
+  </div>
+
+  <div class="accessories-container">
+    <div class="accessory-options">
+      <h3>Accessories</h3>
+      <button onclick="toggleAccessory('hat')">🎩 Hat</button>
+      <button onclick="toggleAccessory('glasses')">🕶️ Glasses</button>
+      <button onclick="toggleAccessory('pinkbow')">🎀 Pink Bow</button>
+      <button onclick="toggleAccessory('purplebow')">🎀 Purple Bow</button>
+    </div>
+
+    <div class="care-buttons">
+      <button onclick="feedPet()">🍪 Feed</button>
+      <button onclick="waterPet()">💧 Water</button>
+      <button onclick="bathePet()">🛁 Bath</button>
+      <button onclick="putPetToSleep()">🌙 Sleep</button>
+    </div>
+
+    <div class="accessories">
+      <img id="hat" src="images/hat_crown.png" class="accessory hidden" />
+      <img id="glasses" src="images/glasses.png" class="accessory hidden" />
+      <img id="pinkbow" src="images/pinkbow.png" class="accessory hidden" />
+      <img id="purplebow" src="images/purplebow.png" class="accessory hidden" />
+    </div>
+  </div>
+
+  <footer>My Web Pet 🐾</footer>
+
+
+</body>
+</html>
